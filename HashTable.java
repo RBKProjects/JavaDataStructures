@@ -19,13 +19,7 @@ public class HashTable {
         public String key;
         public String value;
     }
-    //constructor of hash table
-    public HashTable() {
-        //init vals in array
-        for(int i=0; i<ARR_SIZE; i++) {
-            arr[i] = null;
-        }
-    }
+
     public void insert (String key, String value) {
         int index = getIndexBelowMaxForKey(key, ARR_SIZE);
         LinkedList<Bucket> items = arr[index];
@@ -96,10 +90,9 @@ public class HashTable {
 
         hashTable.insert("cat","1");
         hashTable.insert("cat","2");
-        //hashTable.remove("cat");
-
-        System.out.println(hashTable.getIndexBelowMaxForKey("cat",8));
-        System.out.println(hashTable.retrieve("cat"));
+        hashTable.insert("dog","3");
+        hashTable.remove("cat");
+        System.out.println(hashTable.retrieve("dog"));
 
     }
 
