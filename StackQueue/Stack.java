@@ -6,5 +6,8 @@ public class Stack {
     public void pop() {
         //your code is here
     }
+    public void printElements(){
+     	//your code is here
+    }
 
 }
